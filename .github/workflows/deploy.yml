@@ -1,17 +1,11 @@
 name: "Deploy"
-
 on:
-    push:
-      branches:
-        - main
-
-#on:
- # pull_request:
-#    types: closed
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
-    #if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     name: "Deploy to Netlify"
     steps:
